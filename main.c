@@ -8,8 +8,8 @@ void delay(int loop)
 	int k;
 	for(k = 0;k<=loop;k++)
 	{
-	volatile int j = 0x10000;
-	while (j--);
+		volatile int j = 0x10000;
+		while (j--);
 	}
 }
 
@@ -38,6 +38,7 @@ int main()
 		if (i == 0x100)
 			i = 0x10;
 		*gpkdat = i;
+		delay(2);
 	}
 	*gpkdat = 0;
 	while(1);

@@ -8,7 +8,7 @@ OBJDUMP = arm-elf-objdump
 CURDIR := D:/eclipse_projects/libUART
 
 INCLUDEDIR 	:= $(CURDIR)/include
-CFLAGS 		:= -Wall -g -fno-builtin  #-Wall 开启警告 -Os优化  不使用__builtin_函数
+CFLAGS 		:= -Wall -Os -fno-builtin  #-Wall 开启警告 -Os优化  不使用__builtin_函数
 CPPFLAGS   	:= -nostdinc -I$(INCLUDEDIR) #不要在标准系统目录中搜索头文件  在指定目录下搜索头文件
 LIBSDIR := D:/eclipse_projects/libUART/lib
 
