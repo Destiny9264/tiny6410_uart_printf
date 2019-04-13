@@ -5,6 +5,7 @@ SECTIONS {
 			start.o
 			clock.o
 			sdram.o
+			nand.o
 			* (.text)
 	}
 
@@ -17,6 +18,6 @@ SECTIONS {
 	}
 
     bss_start = .;
-    .bss ALIGN(4)  : { *(.bss)  *(common) }
+    .bss ALIGN(4)  : { *(.bss)  *(common)}
     bss_end = .;
 }

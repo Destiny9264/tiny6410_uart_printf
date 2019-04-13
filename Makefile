@@ -5,16 +5,16 @@ AR      = arm-elf-ar
 OBJCOPY = arm-elf-objcopy
 OBJDUMP = arm-elf-objdump
 
-CURDIR := D:/eclipse_projects/uart_lib
+CURDIR := D:/eclipse_projects/libUART
 
 INCLUDEDIR 	:= $(CURDIR)/include
-CFLAGS 		:= -Wall -Os -fno-builtin  #-Wall 开启警告 -Os优化  不使用__builtin_函数
+CFLAGS 		:= -Wall -g -fno-builtin  #-Wall 开启警告 -Os优化  不使用__builtin_函数
 CPPFLAGS   	:= -nostdinc -I$(INCLUDEDIR) #不要在标准系统目录中搜索头文件  在指定目录下搜索头文件
-LIBSDIR := D:/eclipse_projects/uart_lib/lib
+LIBSDIR := D:/eclipse_projects/libUART/lib
 
 export 	CC AR LD OBJCOPY OBJDUMP INCLUDEDIR CFLAGS CPPFLAGS 
 
-objs := start.o clock.o sdram.o  main.o uart.o  lib/libc.a
+objs := start.o clock.o sdram.o  main.o uart.o nand.o lib/libc.a
 
 all : uart.bin
 uart.bin: $(objs)
